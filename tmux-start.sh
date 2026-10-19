@@ -1,4 +1,9 @@
 #!/bin/bash
+# The tmux server snapshots this environment into every pane. When launched from
+# inside Claude Code it would inherit GIT_EDITOR=true (git commit opens no editor)
+# and the CLAUDE* session vars (every claude in tmux becomes a child session).
+unset GIT_EDITOR "${!CLAUDE@}"
+
 # Start Main session
 TAB_MAIN_NAME="🏬 Main"
 TAB_WF_NAME="🪰 WF"
