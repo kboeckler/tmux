@@ -6,7 +6,7 @@ unset GIT_EDITOR "${!CLAUDE@}"
 
 # Start Main session
 TAB_MAIN_NAME="🏬 Main"
-TAB_WF_NAME="🪰 WF"
+TAB_WF_NAME="🐱🪰🐳 Services"
 TAB_CLAUDE_NAME="🤖 Claude"
 PANE_MAIN=$(tmux new -s Main -P -F "#{pane_id}" -d -n "$TAB_MAIN_NAME" zsh)
 PANE_WF=$(tmux new-window -P -F "#{pane_id}" -n "$TAB_WF_NAME" zsh)
@@ -22,7 +22,7 @@ PANE_CLAUDE=$(tmux new-window -P -F "#{pane_id}" -n "$TAB_CLAUDE_NAME" zsh)
 tmux send-keys -t "$TAB_CLAUDE_NAME.0" 'cd $HOME/claude' Enter
 tmux send-keys -t "$TAB_CLAUDE_NAME.0" 'claude' Enter
 tmux select-window -t "$TAB_MAIN_NAME"
-tmux send-keys -t "$TAB_WF_NAME.0" 'wf' Enter
+tmux send-keys -t "$TAB_WF_NAME.0" 'tom' Enter
 tmux send-keys -t "$TAB_WF_NAME.1" 'kc' Enter
 tmux send-keys -t "$TAB_WF_NAME.2" 'wfzw' Enter
 tmux send-keys -t "$TAB_WF_NAME.3" 'cibseven' Enter
