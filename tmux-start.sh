@@ -18,7 +18,7 @@ tmux splitw -h -l "50%" zsh
 tmux splitw -v -l "50%" zsh
 tmux select-pane -t 0
 PANE_CLAUDE=$(tmux new-window -P -F "#{pane_id}" zsh)
-tmux send-keys -t "$PANE_CLAUDE" 'claude' Enter
+tmux send-keys -t "$PANE_CLAUDE" 'claude Claude' Enter
 tmux select-window -t "$TAB_MAIN_NAME"
 tmux send-keys -t "$TAB_WF_NAME.0" 'tom' Enter
 tmux send-keys -t "$TAB_WF_NAME.1" 'kc' Enter
